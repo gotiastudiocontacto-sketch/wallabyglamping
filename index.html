@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wallaby Glamping · Glamping con jacuzzi a 1 hora de Bogotá</title>
+<meta name="description" content="Wallaby Glamping en Silvania, a 1 hora de Bogotá: Domo y Cabaña Wallaby con jacuzzi privado, spa, asado con vista y pet friendly. Reserva por WhatsApp al 350 619 7915.">
+<meta name="theme-color" content="#f3f0e8">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Wallaby Glamping">
+<meta property="og:title" content="Wallaby Glamping · ¿Un descanso? El mejor lugar es acá">
+<meta property="og:description" content="Glamping con jacuzzi privado a 1 hora de Bogotá. Domo, cabaña y spa. Reserva por WhatsApp.">
+<!-- Vista previa al compartir por WhatsApp: cambia el dominio por el real al publicar (URL completa con https). -->
+<meta property="og:url" content="https://wallaby-glamping.vercel.app/">
+<meta property="og:image" content="https://wallaby-glamping.vercel.app/og-image.jpg">
+<meta property="og:image:secure_url" content="https://wallaby-glamping.vercel.app/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Página de Wallaby Glamping con domo, cabaña, spa, videos y reservas por WhatsApp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://wallaby-glamping.vercel.app/og-image.jpg">
+<link rel="icon" type="image/jpeg" href="logo-tile.jpg">
+<link rel="apple-touch-icon" href="logo-tile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+/* =====================================================================
+   NEGOCIO — Edita SOLO este bloque para cambiar los datos de la página.
+   Si un campo queda vacío ("" o []), esa parte se oculta.
+   ===================================================================== */
+const NEGOCIO = {
+  tipo: "glamping",
+  schemaTipo: "Campground",
+  nombre: "Wallaby Glamping",
+  marca: "Wallaby Glamping",
+  ciudad: "Silvania, Cundinamarca",
+  clienteIdeal: "Parejas de Bogotá que buscan un plan romántico con jacuzzi privado a una hora de la ciudad",
+  idioma: "es",
+  tono: "cercano",
+
+  // ---- ESTILO (crema y verde bosque de su web, con el coral de su canguro) ----
+  estilo: {
+    modo: "claro",
+    fondo: "#f3f0e8",                       // Crema de su web, plano
+    principal: "#28352d",                   // Verde bosque de su web: botón principal y foco
+    acento: "#d9876c",                      // Coral del canguro de sus destacados
+    fuente: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, sans-serif',
+    fuenteMarca: '"Cormorant Garamond", Georgia, serif',
+    fuenteTitular: '"Cormorant Garamond", Georgia, serif'
+  },
+
+  // ---- PANTALLA DE CARGA ----
+  cargador: { activo: true, segundos: 1.6 },
+
+  // ---- CONTACTO ----
+  contacto: {
+    whatsapp: "573506197915",
+    telefono: "350 619 7915",
+    mensaje: "Hola, vi su página y quiero reservar en Wallaby Glamping.",
+    direccion: "Silvania, Cundinamarca",
+    ciudadSede: "A 1 hora de Bogotá, en medio de la montaña",
+    mapaEmbed: '<iframe src="https://www.google.com/maps?q=4.4616298,-74.3793467&z=15&output=embed"></iframe>',
+    mapsUrl: "https://www.google.com/maps/place/Wallaby+Glamping/@4.4616298,-74.3793467,17z",
+    sedes: [],
+    zonaHoraria: "America/Bogota",
+    estadoFijo: "Reservas abiertas por WhatsApp",
+    horario: {},
+    redes: [
+      { nombre: "Instagram", url: "https://www.instagram.com/wallabyglamping/" },
+      { nombre: "Sitio web", url: "https://wallabyglamping.com/" }
+    ]
+  },
+
+  // ---- CONTENIDO ----
+  contenido: {
+    logo: "logo-tile.jpg",
+    logoCarga: "",
+    lema: "Naturaleza y elegancia · #BeWallaby",
+    titular: "¿Un descanso? El mejor lugar es acá.",
+    subtitulo: "Un glamping con jacuzzi privado a 1 hora de Bogotá. Despierta con los pájaros, escucha la quebrada y desconéctate del mundo con quien más quieres.",
+    confianza: [
+      { icono: "jacuzzi", texto: "Jacuzzi privado" },
+      { icono: "pin", texto: "A 1 hora de Bogotá" },
+      { icono: "huella", texto: "Pet friendly" },
+      { icono: "hoja", texto: "Spa en el glamping" }
+    ],
+    oferta: {                               // De sus publicaciones
+      titulo: "Celebra con quien amas",
+      detalle: "Cumpleaños, aniversarios o un fin de semana romántico: decoramos el glamping para tu ocasión especial.",
+      boton: "Planear mi sorpresa",
+      enlace: ""
+    },
+    servicios: [
+      { nombre: "Domo Wallaby", detalle: "Jacuzzi, ducha sin techo y cama king", icono: "ic-domo.jpg" },
+      { nombre: "Cabaña Wallaby", detalle: "Jacuzzi adentro, malla catamarán y vista al cielo", icono: "ic-cabana.jpg" },
+      { nombre: "Spa", detalle: "Masajes, terapias corporales y limpieza facial", icono: "ic-spa.jpg" },
+      { nombre: "Asado con vista", detalle: "Parrilla en la terraza frente a la montaña", icono: "ic-asado.jpg" }
+    ],
+    // Videos (reels de su Instagram). Se reproducen dentro de la página
+    videos: [
+      { nombre: "Jacuzzi", frase: "Bajo las estrellas", reel: "DF9GAN3pAPd", portada: "domo.jpg" },
+      { nombre: "La cabaña", frase: "Bésame en esta cabaña", reel: "DGUgvB9semI", portada: "cabana-interior.jpg" },
+      { nombre: "Tu escape", frase: "Celebra con quien amas", reel: "DFtz13dMZ-c", portada: "cabana.jpg" }
+    ],
+    incluye: ["Desayuno preparado con dedicación", "Ducha sin techo rodeada de plantas", "Sonido de la quebrada mientras descansas"],
+    incluyeTitulo: "Pensado en ti",
+    incluyeNota: "Detalles de tu estadía",
+    incluyeBoton: null,
+    aviso: "",
+    foto: "domo-v.jpg",
+    fotos: ["cabana.jpg", "cabana-interior.jpg", "ducha.jpg"]
+  }
+};
+document.documentElement.style.setProperty("--ld", (NEGOCIO.cargador && NEGOCIO.cargador.activo ? NEGOCIO.cargador.segundos : 0) + "s");
+</script>
+
+<style>
+:root{
+  --bg:#eef2f5; --primary:#1c2e5c; --on-primary:#fff; --accent:#2a8a9c;
+  --text:#1d1d1f; --text2:#6e6e73; --text2-bg:#5a5f66;
+  --surf:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,255,255,.68));
+  --rim:linear-gradient(165deg,rgba(255,255,255,1) 0%,rgba(255,255,255,.18) 50%,rgba(255,255,255,.5) 100%);
+  --hair:0 0 0 1px rgba(0,0,0,.07); --inner:inset 0 1px 0 #fff;
+  --drop:0 1px 1px rgba(0,0,0,.03),0 4px 12px -4px rgba(0,0,0,.06),0 26px 52px -22px rgba(0,0,0,.16);
+  --fill:rgba(118,118,128,.10); --sep:rgba(60,60,67,.12); --hover:rgba(118,118,128,.08);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display",Inter,sans-serif;
+  --font-marca:Georgia,serif; --font-titular:var(--font);
+  --ld:1.6s;
+}
+html[data-modo="oscuro"]{
+  --text:#f5f5f7; --text2:#a1a1a6; --text2-bg:#a1a1a6;
+  --surf:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.035));
+  --rim:linear-gradient(165deg,rgba(255,255,255,.24) 0%,rgba(255,255,255,.06) 50%,rgba(255,255,255,.03) 100%);
+  --hair:0 0 0 1px rgba(0,0,0,.4); --inner:inset 0 1px 0 rgba(255,255,255,.06);
+  --drop:0 1px 1px rgba(0,0,0,.2),0 4px 12px -4px rgba(0,0,0,.3),0 26px 52px -22px rgba(0,0,0,.6);
+  --fill:rgba(118,118,128,.24); --sep:rgba(84,84,88,.45); --hover:rgba(255,255,255,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--text);background:var(--bg);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+svg{flex:none}
+[hidden]{display:none!important}
+
+/* ---------- Pantalla de carga ---------- */
+#loader{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;animation:ldOut .45s ease var(--ld) forwards}
+#loader img{width:176px;height:auto;border-radius:32px;opacity:0;transform:translateY(6px) scale(.98);animation:ldIn .7s cubic-bezier(.2,.7,.2,1) .1s forwards}
+#loader .ld-name{font-family:var(--font-marca);font-size:24px;font-weight:600;opacity:0;animation:ldIn .7s cubic-bezier(.2,.7,.2,1) .25s forwards}
+#loader .ld-bar{width:120px;height:2px;border-radius:2px;background:rgba(127,127,127,.25);overflow:hidden;margin-top:6px}
+#loader .ld-bar i{display:block;height:100%;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0);animation:ldBar calc(var(--ld) - .2s) cubic-bezier(.4,0,.2,1) .1s forwards}
+@keyframes ldIn{to{opacity:1;transform:none}}
+@keyframes ldBar{to{transform:scaleX(1)}}
+@keyframes ldOut{to{opacity:0;visibility:hidden}}
+
+/* ---------- Vidrio ---------- */
+.glass{position:relative;background:var(--surf);border-radius:24px;box-shadow:var(--hair),var(--inner),var(--drop)}
+.glass::before,.btn-g::before,.chip::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--rim);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);pointer-events:none}
+.pill{border-radius:999px}
+
+/* ---------- Layout ---------- */
+.wrap{width:100%;max-width:1400px;margin:0 auto;padding:0 28px}
+.topbar{position:sticky;top:14px;z-index:20;margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 8px;
+  -webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.logo{width:40px;height:40px;border-radius:12px;background:#000;display:grid;place-items:center;overflow:hidden;flex:none;box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+.logo img{width:100%;height:100%;object-fit:cover}
+.logo.ini{background:var(--primary);color:var(--on-primary);font-family:var(--font-marca);font-size:20px}
+.brand-name{font-family:var(--font-marca);font-size:28px;font-weight:600;letter-spacing:-.005em;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.01em}
+.bar-r{display:flex;align-items:center;gap:6px}
+.tel{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--text2);padding:0 12px;min-height:44px;border-radius:12px;transition:color .2s;font-variant-numeric:tabular-nums}
+.tel:hover{color:var(--text)}
+
+main.wrap{flex:1;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;padding-top:20px;padding-bottom:20px;align-items:start}
+.col{display:flex;flex-direction:column;gap:14px;min-width:0}
+
+.status{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;font-size:14px;color:var(--text2);min-height:36px}
+.dot{width:8px;height:8px;border-radius:50%;background:#8e8e93}
+.dot.on{background:#30b158;box-shadow:0 0 0 3px rgba(48,177,88,.18)}
+.lema{font-size:14px;font-weight:500;color:var(--accent)}
+h1{font-family:var(--font-titular);font-size:clamp(46px,4.2vw,64px);font-weight:600;letter-spacing:-.01em;line-height:.98;margin-top:6px;text-wrap:balance}
+.sub{font-size:17px;color:var(--text2-bg);line-height:1.45;text-wrap:pretty}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none}
+.chip{position:relative;display:flex;align-items:center;gap:8px;min-height:40px;padding:6px 12px;border-radius:12px;font-size:13px;font-weight:500;line-height:1.25;background:var(--surf);box-shadow:var(--hair),var(--inner),0 1px 1px rgba(0,0,0,.03)}
+.chip svg{color:var(--accent)}
+
+/* ---------- Botones ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:12px;font-weight:500;font-size:16px;border:0;cursor:pointer;transition:transform .2s ease,filter .2s ease;white-space:nowrap}
+.btn-p{background:var(--primary);color:var(--on-primary)}
+.btn-p:hover{filter:brightness(1.15)}
+.btn-g{background:var(--surf);color:var(--text);box-shadow:var(--hair),var(--inner),0 1px 1px rgba(0,0,0,.03),0 4px 12px -4px rgba(0,0,0,.06)}
+.btn-g:hover{transform:translateY(-1px)}
+.btn:active{transform:scale(.98)}
+.btn-sm{height:44px;padding:0 16px;font-size:15px}
+.btn:focus-visible,.row:focus-visible,a:focus-visible,.thumbs button:focus-visible,.vid:focus-visible{outline:none;box-shadow:0 0 0 4px var(--ring)}
+
+/* ---------- Tarjetas ---------- */
+.card{padding:16px 18px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--sep)}
+.head h2{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.head small{font-size:13px;color:var(--text2);text-align:right}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+.duo.solo{display:block}
+#galeria{padding:8px;position:relative}
+.gal-main{width:100%;height:100%;min-height:200px;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block;background:var(--fill)}
+.thumbs{position:absolute;left:18px;bottom:18px;display:flex;gap:8px}
+.thumbs button{width:44px;height:44px;border-radius:10px;overflow:hidden;border:0;padding:0;cursor:pointer;opacity:.85;box-shadow:0 0 0 2px rgba(255,255,255,.9);transition:opacity .2s}
+.thumbs button[aria-current="true"]{opacity:1;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--primary)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+
+.offer{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:18px}
+.duo.solo .offer{flex-direction:row;align-items:center}
+.gift{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:var(--accent);background:var(--accent-tint);flex:none}
+.offer h3{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.offer p{font-size:14px;color:var(--text2);margin-top:2px}
+.offer .btn{width:100%;margin-top:auto}
+
+/* Lista de tratamientos */
+.list{list-style:none}
+.row{display:flex;align-items:center;gap:12px;min-height:44px;padding:7px 10px;margin:0 -10px;border-radius:12px;transition:background .15s;cursor:pointer}
+.list li+li .row{box-shadow:inset 0 1px 0 var(--sep)}
+.row:hover{background:var(--hover)}
+.row .ic{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none;background:#000;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+.row .ic.ini{display:grid;place-items:center;font-family:var(--font-marca);font-size:18px;font-weight:600;color:var(--accent)}
+.row .n{flex:1;min-width:0;display:flex;flex-direction:column}
+.row .n b{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.row .n small{font-size:13px;color:var(--text2);line-height:1.35}
+.chev{color:var(--text2);opacity:.6;transition:transform .2s ease}
+.row:hover .chev{transform:translateX(2px)}
+
+/* Testimonios en video */
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.vids{align-items:start}
+@media (min-width:1181px){#videos{flex:1}}
+.row .ic.svg{display:grid;place-items:center;background:var(--bg);color:var(--primary);box-shadow:0 0 0 1px color-mix(in srgb,var(--primary) 45%,transparent)}
+.vid{position:relative;display:flex;flex-direction:column;border:0;padding:0;background:none;cursor:pointer;text-align:left;border-radius:14px}
+.vid .pv{position:relative;display:block;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--fill)}
+.vid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.vid:hover img{transform:scale(1.03)}
+.vid .play{position:absolute;left:50%;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.88);color:var(--primary);box-shadow:0 4px 14px -4px rgba(0,0,0,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.vid b{display:block;font-size:13px;font-weight:600;margin-top:6px}
+.vid small{display:block;font-size:12px;color:var(--text2);line-height:1.3}
+
+/* Cómo trabajamos */
+.pasos{list-style:none;counter-reset:p;margin-top:4px}
+.pasos li{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:6px 0;align-items:start}
+.pasos li+li{border-top:1px solid var(--sep)}
+.pasos li::before{counter-increment:p;content:counter(p);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--primary);background:rgba(28,46,92,.08);font-variant-numeric:tabular-nums}
+.pasos b{display:block;font-size:14px;font-weight:600}
+.pasos small{display:block;font-size:13px;color:var(--text2);line-height:1.35}
+
+/* Incluido */
+.incl{list-style:none;display:grid;grid-template-columns:1fr;gap:2px 14px;margin-top:6px}
+.incl li{display:flex;align-items:center;gap:8px;font-size:14px;min-height:32px}
+.incl li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--primary);flex:none}
+
+/* Tu cirujano */
+.doc{display:grid;grid-template-columns:96px 1fr;gap:14px;margin-top:8px;align-items:center}
+.doc img{width:96px;height:124px;border-radius:14px;object-fit:cover;object-position:50% 25%;display:block;background:var(--fill)}
+.doc b{display:block;font-family:var(--font-marca);font-size:22px;font-weight:600;line-height:1.1}
+.doc small{display:block;font-size:13px;color:var(--text2);margin-top:2px}
+.doc q{display:block;font-family:var(--font-marca);font-style:italic;font-size:16px;line-height:1.3;margin-top:8px;color:var(--text)}
+.doc .btn{margin-top:10px}
+
+/* Formulario */
+form{display:grid;gap:10px;margin-top:8px}
+.field{width:100%;height:44px;border:0;border-radius:12px;background:var(--fill);padding:0 14px;font-size:16px;outline:none;transition:box-shadow .2s;-webkit-appearance:none;appearance:none;min-width:0}
+select.field{padding-right:36px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238e8e93' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.field::placeholder{color:var(--text2)}
+.field:focus{box-shadow:0 0 0 4px var(--ring)}
+.fallback{font-size:13px;color:var(--text2);text-align:center}
+.fallback a{text-decoration:underline;text-underline-offset:2px}
+
+/* Sedes y horario */
+.sedes{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin-top:8px}
+.sedes li{font-size:13px;font-weight:500;padding:5px 11px;border-radius:999px;background:var(--fill)}
+.sedes li:first-child{background:var(--primary);color:var(--on-primary)}
+.addr{font-size:15px;margin-top:10px}
+.ref{font-size:13px;color:var(--text2);margin-top:2px}
+.map{width:100%;height:110px;border:0;border-radius:14px;display:block;margin-top:10px;background:var(--fill)}
+.hours{list-style:none;margin-top:8px;font-size:14px}
+.hours li{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:27px}
+.hours li+li{border-top:1px solid var(--sep)}
+.hours .d{display:flex;align-items:center;gap:8px}
+.hours .h{color:var(--text2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.today{font-size:12px;font-weight:500;padding:1px 8px;border-radius:999px;box-shadow:inset 0 0 0 1px currentColor;color:var(--text)}
+.mini{font-size:13px;color:var(--text2);margin-top:8px;line-height:1.35}
+
+/* Modal de video */
+dialog{border:0;padding:0;background:transparent;max-width:min(420px,calc(100vw - 32px));width:100%;margin:auto;overflow:visible}
+dialog::backdrop{background:rgba(10,14,24,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.modal{padding:10px;border-radius:24px}
+.modal-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 6px 10px 10px}
+.modal-h b{font-size:15px;font-weight:600}
+.x{width:44px;height:44px;border-radius:12px;border:0;background:var(--fill);display:grid;place-items:center;cursor:pointer}
+.modal iframe{display:block;width:100%;height:min(72vh,640px);border:0;border-radius:16px;background:#fff}
+.modal .alt{display:block;text-align:center;font-size:13px;color:var(--text2);padding:10px 0 4px}
+.modal .alt a{text-decoration:underline;text-underline-offset:2px}
+
+/* Pie */
+.aviso{font-size:12px;color:var(--text2-bg);width:100%}
+footer.wrap{border-top:1px solid var(--sep);padding-top:16px;padding-bottom:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--text2-bg)}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+footer a{min-height:24px;display:inline-flex;align-items:center;transition:color .2s}
+footer a:hover{color:var(--text)}
+
+.fab{display:none;position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;width:56px;height:56px;border-radius:50%;background:var(--primary);color:var(--on-primary);place-items:center;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 8px 24px -8px rgba(0,0,0,.3)}
+
+/* Aparición */
+.rise{opacity:0;transform:translateY(8px);animation:rise .5s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--ld) + var(--i,0) * 50ms)}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  :root{--ld:.5s!important}
+  #loader img,#loader .ld-name{animation:none;opacity:1;transform:none}
+  #loader .ld-bar{display:none}
+  .rise{opacity:1;transform:none;animation:none}
+  *{transition:none!important}
+}
+
+/* Pantallas medianas: 2 columnas */
+@media (max-width:1180px){
+  main.wrap{grid-template-columns:1.15fr 1fr}
+  .col3{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+}
+/* Celular */
+@media (max-width:859px){
+  .wrap{padding:0 16px}
+  .topbar{top:10px;margin-top:10px}
+  .tel span{display:none}
+  .tel{padding:0 10px}
+  main.wrap{grid-template-columns:1fr;gap:16px;padding-top:18px;padding-bottom:96px}
+  .col,.duo,.col3{display:contents}
+  .status{order:1}.h1w{order:2}.sub{order:3}.ctas{order:4}.chips{order:5}#oferta{order:6}#galeria{order:7}#servicios{order:8}#videos{order:9}#agenda{order:10}#incluye{order:11}#ubicacion{order:12}
+  .ctas .btn{flex:1 1 160px}
+  .gal-main{min-height:0;aspect-ratio:1/1;object-position:50% 40%}
+  .fab{display:grid}
+  .aviso{font-size:12px;color:var(--text2-bg);width:100%}
+footer.wrap{padding-bottom:96px}
+}
+@media (max-width:480px){
+  .brand-name{font-size:24px}
+  .brand-name{font-size:20px}
+  #barTel{display:none}
+  .chips{grid-template-columns:1fr}
+  .bar-r .btn{padding:0 14px}
+}
+</style>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <img src="logo.jpg" alt="">
+  <p class="ld-name" id="ldName"></p>
+  <span class="ld-bar"><i></i></span>
+</div>
+
+<div class="wrap">
+  <header class="topbar glass pill rise" style="--i:0">
+    <a class="brand" href="#" aria-label="Inicio">
+      <span class="logo" id="logo"></span>
+      <span class="brand-name" id="brandName"></span>
+    </a>
+    <div class="bar-r">
+      <a class="tel" id="barTel" href="#">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span id="barTelTxt"></span>
+      </a>
+      <a class="btn btn-p btn-sm" id="barWa" href="#" target="_blank" rel="noopener">Reservar</a>
+    </div>
+  </header>
+</div>
+
+<main class="wrap">
+  <!-- Columna 1: presentación -->
+  <section class="col">
+    <div class="status glass pill rise" style="--i:1" id="status" role="status">
+      <span class="dot" id="dot"></span><span id="statusTxt">Consultando horario…</span>
+    </div>
+    <div class="h1w rise" style="--i:2"><p class="lema" id="lema"></p><h1 id="titular"></h1></div>
+    <p class="sub rise" style="--i:3" id="subtitulo"></p>
+    <div class="ctas rise" style="--i:4">
+      <a class="btn btn-p" id="ctaWa" href="#" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+        Reserva por WhatsApp
+      </a>
+      <a class="btn btn-g" id="ctaCall" href="#">Llamar</a>
+    </div>
+    <ul class="chips rise" style="--i:5" id="chips" aria-label="Por qué elegirnos"></ul>
+
+    <div class="duo" id="duo">
+      <div class="glass rise" style="--i:6" id="galeria">
+        <img class="gal-main" id="galMain" alt="">
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <div class="glass offer rise" style="--i:7" id="oferta">
+        <div class="gift" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+        </div>
+        <div><h3 id="ofTit"></h3><p id="ofDet"></p></div>
+        <a class="btn btn-g btn-sm" id="ofBtn" href="#" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Columna 2: tratamientos y testimonios -->
+  <section class="col">
+    <div class="glass card rise" style="--i:3" id="servicios">
+      <div class="head"><h2>Nuestro glamping</h2><small>Toca para reservar por WhatsApp</small></div>
+      <ul class="list" id="servList"></ul>
+    </div>
+    <div class="glass card rise" style="--i:4" id="videos">
+      <div class="head"><h2>Míralo en video</h2><small>Videos de nuestro Instagram</small></div>
+      <div class="vids" id="vids"></div>
+    </div>
+  </section>
+
+  <!-- Columna 3: agenda y sedes -->
+  <section class="col col3">
+    <div class="glass card rise" style="--i:5" id="agenda">
+      <div class="head"><h2>Consulta tu fecha</h2><small>Te respondemos por WhatsApp</small></div>
+      <form id="form" novalidate>
+        <input class="field" id="fNombre" type="text" placeholder="Tu nombre" autocomplete="name" aria-label="Tu nombre">
+        <select class="field" id="fServ" aria-label="Procedimiento de interés"></select>
+        <select class="field" id="fCiudad" aria-label="Ciudad"></select>
+        <button class="btn btn-p" type="submit">Enviar por WhatsApp</button>
+        <p class="fallback">¿No se abrió WhatsApp? <a id="fFallback" href="#" target="_blank" rel="noopener">Ábrelo aquí</a></p>
+      </form>
+    </div>
+
+    <div class="glass card rise" style="--i:6" id="ubicacion">
+      <div class="head"><h2>Cómo llegar</h2><small>Silvania, Cundinamarca</small></div>
+      <ul class="sedes" id="sedes" aria-label="Sedes"></ul>
+      <p class="addr" id="addr"></p>
+      <p class="ref" id="ref"></p>
+      <iframe class="map" id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa" hidden></iframe>
+      <a class="btn btn-g btn-sm" id="dirBtn" href="#" target="_blank" rel="noopener" style="margin-top:10px">Abrir en Google Maps</a>
+      <ul class="hours" id="hours"></ul>
+      <p class="mini" id="sinDir">Te enviamos la dirección de tu sede por WhatsApp.</p>
+    </div>
+
+    <div class="glass card rise" style="--i:7" id="incluye">
+      <div class="head"><h2 id="inclTit">Incluido en tu estadía</h2><small id="inclNota">Según el espacio</small></div>
+      <ul class="incl" id="inclList"></ul>
+      <a class="btn btn-g btn-sm" id="inclBtn" href="#" target="_blank" rel="noopener" style="margin-top:10px" hidden></a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap rise" style="--i:8">
+  <span id="copy"></span>
+  <nav id="redes" aria-label="Enlaces"></nav>
+  <a href="https://gotiastudio.it.com" target="_blank" rel="noopener">Página creada por Gotia Studio</a>
+  <p class="aviso" id="aviso"></p>
+</footer>
+
+<dialog id="vModal" aria-labelledby="vTitle">
+  <div class="glass modal">
+    <div class="modal-h">
+      <b id="vTitle"></b>
+      <button class="x" type="button" id="vClose" aria-label="Cerrar video">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg>
+      </button>
+    </div>
+    <iframe id="vFrame" title="Video de testimonio" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    <span class="alt">¿No carga? <a id="vAlt" href="#" target="_blank" rel="noopener">Míralo en Instagram</a></span>
+  </div>
+</dialog>
+
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+(function(){
+  const N = NEGOCIO, C = N.contacto || {}, K = N.contenido || {}, E = N.estilo || {};
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const vacio = v => v == null || (typeof v === "string" && !v.trim()) || (Array.isArray(v) && !v.length);
+  const ocultar = (id, cond) => { if (cond) $(id).hidden = true; };
+
+  /* ---------- Estilo ---------- */
+  const root = document.documentElement;
+  root.dataset.modo = E.modo === "oscuro" ? "oscuro" : "claro";
+  const bg = E.fondo || (E.modo === "oscuro" ? "#0b0b0d" : "#eff0f3");
+  const hex2rgb = h => { h = h.replace("#",""); if (h.length === 3) h = h.split("").map(x=>x+x).join(""); const n = parseInt(h,16); return [n>>16&255, n>>8&255, n&255]; };
+  const lum = h => { const [r,g,b] = hex2rgb(h).map(v => { v/=255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }); return .2126*r + .7152*g + .0722*b; };
+  const ratio = (a,b) => { const x = lum(a), y = lum(b); return (Math.max(x,y)+.05)/(Math.min(x,y)+.05); };
+  const P = E.principal || "#0b57d0", A = E.acento || "#f59e0b";
+  const [pr,pg,pb] = hex2rgb(P), [ar,ag,ab] = hex2rgb(A);
+  root.style.setProperty("--bg", bg);
+  root.style.setProperty("--primary", P);
+  root.style.setProperty("--on-primary", ratio(P,"#ffffff") >= ratio(P,"#000000") ? "#ffffff" : "#000000");
+  root.style.setProperty("--ring", `rgba(${pr},${pg},${pb},.4)`);
+  root.style.setProperty("--accent", A);
+  root.style.setProperty("--accent-tint", `rgba(${ar},${ag},${ab},.14)`);
+  if (E.fuente) root.style.setProperty("--font", E.fuente);
+  if (E.fuenteMarca) root.style.setProperty("--font-marca", E.fuenteMarca);
+  if (E.fuenteTitular) root.style.setProperty("--font-titular", E.fuenteTitular);
+
+  /* ---------- Pantalla de carga ---------- */
+  const ld = $("loader");
+  if (!(N.cargador && N.cargador.activo)) ld.remove();
+  else {
+    $("ldName").textContent = N.marca || N.nombre;
+    if (K.logoCarga) $("ldName").remove();
+    if (K.logoCarga || K.logo) ld.querySelector("img").src = K.logoCarga || K.logo; else ld.querySelector("img").remove();
+    ld.addEventListener("animationend", e => { if (e.animationName === "ldOut") ld.remove(); });
+  }
+
+  /* ---------- Analítica ---------- */
+  const track = (ev, data) => {
+    try { if (typeof window.gtag === "function") window.gtag("event", ev, data || {}); } catch(e){}
+    try { if (typeof window.fbq === "function") window.fbq("trackCustom", ev, data || {}); } catch(e){}
+  };
+
+  /* ---------- WhatsApp ---------- */
+  const wa = msg => "https://wa.me/" + String(C.whatsapp || "").replace(/\D/g,"") + "?text=" + encodeURIComponent(msg || "");
+  const hayWa = !vacio(C.whatsapp);
+  const bindWa = (el, msg, label) => { el.href = wa(msg); el.addEventListener("click", () => track("whatsapp_click", { ubicacion: label })); };
+
+  /* ---------- Barra ---------- */
+  $("brandName").textContent = N.marca || N.nombre || "";
+  if (K.logo) $("logo").innerHTML = `<img src="${esc(K.logo)}" alt="">`;
+  else { $("logo").classList.add("ini"); $("logo").textContent = (N.nombre || "?").trim().charAt(0).toUpperCase(); }
+  const digTel = String(C.telefono || "").replace(/\D/g,"");
+  const telHref = "tel:" + (digTel.length === 10 ? "+57" : "") + digTel;
+  if (C.telefono) { $("barTelTxt").textContent = C.telefono; $("barTel").href = telHref; $("ctaCall").href = telHref; }
+  ocultar("barTel", vacio(C.telefono)); ocultar("ctaCall", vacio(C.telefono));
+  if (hayWa) { bindWa($("barWa"), C.mensaje, "barra"); bindWa($("ctaWa"), C.mensaje, "principal"); bindWa($("fab"), C.mensaje, "flotante"); }
+  ocultar("barWa", !hayWa); ocultar("ctaWa", !hayWa); ocultar("fab", !hayWa);
+
+  /* ---------- Hero ---------- */
+  $("lema").textContent = K.lema || ""; ocultar("lema", vacio(K.lema));
+  $("titular").textContent = K.titular || "";
+  $("subtitulo").textContent = K.subtitulo || ""; ocultar("subtitulo", vacio(K.subtitulo));
+
+  /* ---------- Confianza ---------- */
+  const IC = {
+    plato: '<path d="M4 17h16"/><path d="M5.5 17a6.5 6.5 0 0 1 13 0"/><path d="M12 8.5V7"/><path d="M10.5 7h3"/>',
+    huella: '<circle cx="6" cy="10" r="1.8"/><circle cx="10" cy="5.5" r="1.8"/><circle cx="14" cy="5.5" r="1.8"/><circle cx="18" cy="10" r="1.8"/><path d="M12 11c-3 0-5.5 4.5-5.5 6.5 0 1.6 1.3 2.5 2.8 2.5 1.1 0 1.8-.6 2.7-.6s1.6.6 2.7.6c1.5 0 2.8-.9 2.8-2.5 0-2-2.5-6.5-5.5-6.5z"/>',
+    corazon: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+    escudo: '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
+    bote: '<path d="M3 15h18l-2.5 4.5H5.5z"/><path d="M6 15V9h9l3 6M9 9V5"/>',
+    jacuzzi: '<path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-3z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3"/>',
+    hoja: '<path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15z"/><path d="M5 19l8-8"/>',
+    estrella: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+    pin: '<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+    sello: '<circle cx="12" cy="10" r="6"/><path d="M9 15.5L8 21l4-2 4 2-1-5.5"/><path d="M10 10l1.5 1.5L14.5 8.5"/>',
+    control: '<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9.5 15l2 2 3.5-3.5"/>',
+    credito: '<rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18M7 15h4"/>'
+  };
+  const conf = (K.confianza || []).filter(c => c && !vacio(c.texto));
+  $("chips").innerHTML = conf.map(c => `<li class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[c.icono] || IC.escudo}</svg>${esc(c.texto)}</li>`).join("");
+  ocultar("chips", !conf.length);
+
+  /* ---------- Galería ---------- */
+  const fotos = [K.foto, ...(K.fotos || [])].filter(f => !vacio(f));
+  if (fotos.length) {
+    $("galMain").src = fotos[0]; $("galMain").alt = "Domo de " + N.nombre;
+    if (fotos.length > 1) {
+      $("thumbs").innerHTML = fotos.map((f,i) => `<button type="button" aria-label="Ver foto ${i+1}" aria-current="${i===0}"><img src="${esc(f)}" alt="" loading="lazy"></button>`).join("");
+      $("thumbs").querySelectorAll("button").forEach((b,i) => b.addEventListener("click", () => {
+        $("galMain").src = fotos[i];
+        $("thumbs").querySelectorAll("button").forEach(x => x.setAttribute("aria-current", x === b));
+      }));
+    }
+  } else { $("galeria").hidden = true; $("duo").classList.add("solo"); }
+
+  /* ---------- Oferta ---------- */
+  const O = K.oferta || {};
+  if (!vacio(O.titulo)) {
+    $("ofTit").textContent = O.titulo; $("ofDet").textContent = O.detalle || "";
+    $("ofBtn").textContent = O.boton || "La quiero";
+    if (/^https:\/\//.test(O.enlace || "")) { $("ofBtn").href = O.enlace; $("ofBtn").addEventListener("click", () => track("oferta_click", {})); }
+    else if (hayWa) bindWa($("ofBtn"), "Hola, quiero la oferta: " + O.titulo, "oferta");
+    else $("ofBtn").hidden = true;
+  } else { $("oferta").hidden = true; $("duo").classList.add("solo"); }
+
+  /* ---------- Tratamientos ---------- */
+  const servs = (K.servicios || []).filter(s => s && !vacio(s.nombre)).slice(0,6);
+  const chev = `<svg class="chev" width="8" height="13" viewBox="0 0 8 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 1.5l5 5-5 5"/></svg>`;
+  if (servs.length) {
+    $("servList").innerHTML = servs.map(s => `<li><a class="row" ${hayWa ? `href="${esc(wa("Hola, quiero información sobre: " + s.nombre + "."))}" target="_blank" rel="noopener"` : ""} data-s="${esc(s.nombre)}">${s.icono && IC[s.icono] ? `<span class="ic svg" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${IC[s.icono]}</svg></span>` : s.icono ? `<img class="ic" src="${esc(s.icono)}" alt="">` : `<span class="ic ini" aria-hidden="true">${esc(s.nombre.split(" ").filter(w=>w.length>2).map(w=>w[0]).join("").slice(0,2).toUpperCase())}</span>`}<span class="n"><b>${esc(s.nombre)}</b>${s.detalle ? `<small>${esc(s.detalle)}</small>` : ""}</span>${hayWa ? chev : ""}</a></li>`).join("");
+    $("servList").querySelectorAll(".row").forEach(r => r.addEventListener("click", () => track("whatsapp_click", { ubicacion: "tratamiento", servicio: r.dataset.s })));
+  } else $("servicios").hidden = true;
+
+  /* ---------- Testimonios en video ---------- */
+  const vids = (K.videos || []).filter(v => v && /^[A-Za-z0-9_-]+$/.test(v.reel || ""));
+  const modal = $("vModal");
+  const cerrar = () => { $("vFrame").src = "about:blank"; if (modal.open) modal.close(); };
+  if (vids.length) {
+    $("vids").innerHTML = vids.map((v,i) => `<button class="vid" type="button" data-i="${i}" aria-label="Ver testimonio de ${esc(v.nombre)}"><span class="pv">${v.portada ? `<img src="${esc(v.portada)}" alt="" loading="lazy">` : ""}<span class="play"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></span></span><b>${esc(v.nombre)}</b>${v.frase ? `<small>${esc(v.frase)}</small>` : ""}</button>`).join("");
+    $("vids").querySelectorAll(".vid").forEach(b => b.addEventListener("click", () => {
+      const v = vids[+b.dataset.i];
+      $("vTitle").textContent = "Testimonio de " + v.nombre;
+      $("vFrame").src = "https://www.instagram.com/reel/" + v.reel + "/embed/";
+      $("vAlt").href = "https://www.instagram.com/reel/" + v.reel + "/";
+      if (typeof modal.showModal === "function") modal.showModal(); else window.open($("vAlt").href, "_blank", "noopener");
+      track("video_click", { video: v.nombre });
+    }));
+    $("vClose").addEventListener("click", cerrar);
+    modal.addEventListener("click", e => { if (e.target === modal) cerrar(); });
+    modal.addEventListener("cancel", e => { e.preventDefault(); cerrar(); });
+  } else $("videos").hidden = true;
+
+  /* ---------- Incluido ---------- */
+  const inc = (K.incluye || []).filter(x => !vacio(x));
+  $("inclList").innerHTML = inc.map(x => `<li>${esc(x)}</li>`).join(""); ocultar("incluye", !inc.length);
+  if (K.incluyeTitulo) $("inclTit").textContent = K.incluyeTitulo;
+  if (K.incluyeNota !== undefined) $("inclNota").textContent = K.incluyeNota;
+  if (K.incluyeBoton && /^https:\/\//.test(K.incluyeBoton.url || "")) { $("inclBtn").href = K.incluyeBoton.url; $("inclBtn").textContent = K.incluyeBoton.texto || "Ver más"; $("inclBtn").hidden = false; }
+
+  /* ---------- Tu cirujano ---------- */
+  const D = K.cirujano || {};
+  if (!vacio(D.nombre) && $("cirujano")) {
+    $("docNom").textContent = D.nombre; $("docCargo").textContent = D.cargo || "";
+    $("docFrase").textContent = D.frase || ""; ocultar("docFrase", vacio(D.frase));
+    if (D.foto) { $("docFoto").src = D.foto; $("docFoto").alt = D.nombre; } else $("docFoto").hidden = true;
+    if (/^https:\/\//.test(D.enlace || "")) $("docLink").href = D.enlace; else $("docLink").hidden = true;
+  }
+  $("aviso").textContent = K.aviso || ""; ocultar("aviso", vacio(K.aviso));
+
+  /* ---------- Formulario ---------- */
+  if (hayWa) {
+    $("fServ").innerHTML = [...servs.map(s => s.nombre), "Aún no sé, recomiéndenme"].map(n => `<option>${esc(n)}</option>`).join("");
+    const ciudades = (C.sedes || []).filter(c => !vacio(c));
+    if (ciudades.length) $("fCiudad").innerHTML = ciudades.map(c => `<option>${esc(c)}</option>`).join(""); else $("fCiudad").hidden = true;
+    const armar = () => { const nom = $("fNombre").value.trim(); return (nom ? "Hola, soy " + nom + ". " : "Hola. ") + "Me interesa: " + $("fServ").value + "." + (ciudades.length ? " Ciudad: " + $("fCiudad").value + "." : "") + " Quiero consultar disponibilidad."; };
+    const upd = () => { $("fFallback").href = wa(armar()); };
+    $("fNombre").addEventListener("input", upd); $("fServ").addEventListener("change", upd); $("fCiudad").addEventListener("change", upd); upd();
+    $("form").addEventListener("submit", e => {
+      e.preventDefault();
+      if (!$("fNombre").value.trim()) { $("fNombre").focus(); return; }
+      const url = wa(armar()); $("fFallback").href = url;
+      track("form_whatsapp", { servicio: $("fServ").value });
+      window.open(url, "_blank", "noopener");
+    });
+    $("fFallback").addEventListener("click", () => track("form_whatsapp", { servicio: $("fServ").value, respaldo: true }));
+  } else $("agenda").hidden = true;
+
+  /* ---------- Sedes y ubicación ---------- */
+  const sedes = (C.sedes || []).filter(s => !vacio(s));
+  $("sedes").innerHTML = sedes.map(s => `<li>${esc(s)}</li>`).join(""); ocultar("sedes", !sedes.length);
+  $("addr").textContent = C.direccion || ""; ocultar("addr", vacio(C.direccion));
+  $("ref").textContent = C.ciudadSede || ""; ocultar("ref", vacio(C.ciudadSede));
+  ocultar("sinDir", !vacio(C.direccion));
+  const src = (C.mapaEmbed || "").match(/src=["']([^"']+)["']/);
+  if (src && /^https:\/\/(www\.)?google\.[a-z.]+\/maps[\/?]/.test(src[1])) { $("map").src = src[1]; $("map").hidden = false; }
+  if (/^https:\/\//.test(C.mapsUrl || "")) { $("dirBtn").href = C.mapsUrl; $("dirBtn").addEventListener("click", () => track("maps_click", {})); } else $("dirBtn").hidden = true;
+
+  /* ---------- Horario y estado ---------- */
+  const DIAS = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
+  const NOMBRES = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+  const H = C.horario || {};
+  const rango = k => { const m = (H[k] || "").trim().match(/^(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})$/); return m ? [ +m[1]*60 + +m[2], +m[3]*60 + +m[4] ] : null; };
+  const fmt = min => { const h = Math.floor(min/60) % 24, m = min % 60; return (h % 12 || 12) + ":" + String(m).padStart(2,"0") + (h < 12 ? " a. m." : " p. m."); };
+  const tz = C.zonaHoraria || "America/Bogota";
+  const ahora = () => {
+    const p = {}; new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date()).forEach(x => p[x.type] = x.value);
+    return { d: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].indexOf(p.weekday), min: (+p.hour % 24) * 60 + +p.minute };
+  };
+  const hayHorario = DIAS.some(k => rango(k));
+  const pintarEstado = () => {
+    if (C.estadoFijo) { $("dot").className = "dot on"; $("statusTxt").textContent = C.estadoFijo; return; }
+    if (!hayHorario) { $("status").hidden = true; return; }
+    const { d, min } = ahora(), r = rango(DIAS[d]);
+    if (r && min >= r[0] && min < r[1]) { $("dot").className = "dot on"; $("statusTxt").textContent = (C.estadoAbierto || "Abierto ahora, cierra a las") + " " + fmt(r[1]); return; }
+    $("dot").className = "dot";
+    for (let i = 0; i < 8; i++) {
+      const k = (d + i) % 7, rr = rango(DIAS[k]);
+      if (!rr || (i === 0 && min >= rr[0])) continue;
+      $("statusTxt").textContent = (C.estadoCerrado || "Cerrado, abre") + " " + (i === 0 ? "hoy" : i === 1 ? "mañana" : "el " + NOMBRES[k].toLowerCase()) + " a las " + fmt(rr[0]); return;
+    }
+    $("statusTxt").textContent = "Cerrado";
+  };
+  pintarEstado(); setInterval(pintarEstado, 60000);
+  if (hayHorario) {
+    const hoy = ahora().d, grupos = [];
+    DIAS.forEach((k,i) => { const v = (H[k] || "").trim(); const g = grupos[grupos.length-1]; if (g && g.v === v) g.fin = i; else grupos.push({ v, ini: i, fin: i }); });
+    $("hours").innerHTML = grupos.map(g => {
+      const n = g.fin - g.ini, lbl = n === 0 ? NOMBRES[g.ini] : NOMBRES[g.ini] + (n === 1 ? " y " : " a ") + NOMBRES[g.fin].toLowerCase();
+      const r = rango(DIAS[g.ini]);
+      return `<li><span class="d">${esc(lbl)}${hoy >= g.ini && hoy <= g.fin ? '<span class="today">Hoy</span>' : ""}</span><span class="h">${r ? fmt(r[0]) + " – " + fmt(r[1]) : "Cerrado"}</span></li>`;
+    }).join("");
+  } else $("hours").hidden = true;
+
+  /* ---------- Pie ---------- */
+  $("copy").textContent = "© " + new Date().getFullYear() + " " + (N.nombre || "");
+  const redes = (C.redes || []).filter(r => r && r.url && /^https?:\/\//.test(r.url));
+  $("redes").innerHTML = redes.map(r => `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.nombre)}</a>`).join("");
+  ocultar("redes", !redes.length);
+
+  /* ---------- JSON-LD ---------- */
+  const SD = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  const abs = f => f ? new URL(f, location.href).href : undefined;
+  const ldj = {
+    "@context": "https://schema.org", "@type": N.schemaTipo || "LocalBusiness",
+    name: N.nombre, description: K.subtitulo, url: location.href.split("#")[0],
+    logo: abs(K.logo), image: fotos.map(abs),
+    telephone: C.whatsapp ? "+" + String(C.whatsapp).replace(/\D/g,"") : undefined,
+    address: C.direccion ? { "@type": "PostalAddress", streetAddress: C.direccion, addressLocality: C.ciudadSede || undefined, addressCountry: "CO" } : { "@type": "PostalAddress", addressCountry: "CO" },
+    sameAs: redes.map(r => r.url),
+    openingHoursSpecification: DIAS.map((k,i) => { const r = rango(k); return r && { "@type": "OpeningHoursSpecification", dayOfWeek: SD[i], opens: H[k].split("-")[0].trim(), closes: H[k].split("-")[1].trim() }; }).filter(Boolean),
+    amenityFeature: inc.map(x => ({ "@type": "LocationFeatureSpecification", name: x, value: true })),
+    makesOffer: servs.map(s => ({ "@type": "Offer", name: s.nombre, description: s.detalle }))
+  };
+  const sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ldj); document.head.appendChild(sc);
+})();
+</script>
+</body>
+</html>
